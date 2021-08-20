@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ZAdanie_testowe.Models.Przejsciowa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Dodaj", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gosc.Imie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rezerwacja.Kod_rezerwacji)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gosc.Imie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rezerwacja.Kod_rezerwacji)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

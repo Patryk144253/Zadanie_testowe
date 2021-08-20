@@ -1,0 +1,82 @@
+﻿@model ZAdanie_testowe.Models.Rezerwacja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rezerwacja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kod_rezerwacji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kod_rezerwacji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_utworzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_utworzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_zameldowania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_zameldowania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_wymeldowania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_wymeldowania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Waluta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Waluta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prowizja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prowizja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zrodlo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zrodlo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

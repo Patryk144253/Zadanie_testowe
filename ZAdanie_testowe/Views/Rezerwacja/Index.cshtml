@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ZAdanie_testowe.Models.Rezerwacja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kod_rezerwacji)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_utworzenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_zameldowania)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_wymeldowania)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Waluta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prowizja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zrodlo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kod_rezerwacji)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_utworzenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_zameldowania)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_wymeldowania)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Waluta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prowizja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zrodlo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,34 @@
+﻿@model ZAdanie_testowe.Models.Przejsciowa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Przejsciowa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gosc.Imie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gosc.Imie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rezerwacja.Kod_rezerwacji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rezerwacja.Kod_rezerwacji)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
